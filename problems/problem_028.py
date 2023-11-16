@@ -10,5 +10,20 @@
 #
 # If the list is empty, then return the empty string.
 
+sample = "racecar"
+sample2 = "onomatopoeia"
+
 def remove_duplicate_letters(s):
-    pass
+    # create variable
+    result = ""
+    # loop through letters
+    for letter in s:
+        # if the letter is new, add to final result
+        if letter not in result:
+            result += letter
+        # if the letter is already there, don't add to final result
+    # return final result
+    return result
+
+print(remove_duplicate_letters(sample))
+print(remove_duplicate_letters(sample2))

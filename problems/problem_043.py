@@ -20,4 +20,27 @@
 # Look up the enumerate function to help you with this problem.
 
 def find_indexes(search_list, search_term):
-    pass
+    # create empty new list
+    new_list = []
+    # loop through original list using index-range-len
+    for index in range(len(search_list)):
+        # if item in original list matches search term, add index to new list
+        if search_list[index] == search_term:
+            new_list.append(index)
+    # return new list
+    return new_list
+
+
+# Test Code
+
+list1 = [1, 2, 3, 4, 5]
+term = 4
+print(find_indexes(list1, term))
+
+list1 = [1, 2, 3, 4, 5]
+term = 6
+print(find_indexes(list1, term))
+
+list1 = [1, 2, 1, 2, 1]
+term = 1
+print(find_indexes(list1, term))

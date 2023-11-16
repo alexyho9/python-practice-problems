@@ -10,5 +10,18 @@
 # Write out some pseudocode before trying to solve the
 # problem to get a good feel for how to solve it.
 
+ingredients = ['flour', 'eggs', 'oil']
+ingredients2 = ['flour', 'rice', 'oil']
+
 def can_make_pasta(ingredients):
-    pass
+    # sufficient?
+    sufficient = False
+    # evaluate what's in the list
+    if 'flour' in ingredients and 'eggs' in ingredients and 'oil' in ingredients:
+        return True
+    # determine if we are sufficient or lacking
+    else:
+        return False
+
+print(can_make_pasta(ingredients))
+print(can_make_pasta(ingredients2))

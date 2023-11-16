@@ -24,4 +24,20 @@
 #     result: "   19"
 
 def pad_left(number, length, pad):
-    pass
+    # initiate variables
+    char_number = len(str(number))
+    # if char_number length is longer than length, return number
+    if char_number >= length:
+        return str(number)
+    # else add padding to the left of number until it fills length
+    else:
+        # count difference between length and character length
+        pad_count = length - char_number
+        # concatenate string of padding and number
+        return str(pad_count * str(pad)) + str(number)
+
+
+print(pad_left(10, 4, "*"))
+print(pad_left(10, 5, "0"))
+print(pad_left(1000, 3, "0"))
+print(pad_left(19, 5, " "))

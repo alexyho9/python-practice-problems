@@ -26,14 +26,29 @@
 
 
 # class Person
+class Person:
     # method initializer with name, hated foods list, and loved foods list
-        # self.name = name
-        # self.hated_foods = hated_foods
-        # self.loved_foods = loved_foods
+    def __init__(self, name, hated_foods, loved_foods):
+        self.name = name
+        self.hated_foods = hated_foods
+        self.loved_foods = loved_foods
     # method taste(self, food)
+    def taste(self, food):
         # if food is in self.hated_foods
+        if food in self.hated_foods:
             # return False
+            return False
         # otherwise, if food is in self.loved_foods
+        elif food in self.loved_foods:
             # return True
+            return True
         # otherwise
+        else:
             # return None
+            return None
+
+alex = Person("Alexander", ["eggplant", "beets", "grasshoppers"], ["squid", "lamb", "potatos"])
+
+print(alex.taste("carrots"))
+print(alex.taste("beets"))
+print(alex.taste("squid"))

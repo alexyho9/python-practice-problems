@@ -28,4 +28,25 @@
 # at the last one you just wrote unless you really must.
 
 def make_sentences(subjects, verbs, objects):
-    pass
+    # Create empty results list
+    results = []
+    # Iterate over subjects, verbs, and objects to create SVO sent
+    for i in subjects:
+        for j in verbs:
+            for k in objects:
+                sentence = i + " " + j + " " + k
+                # append sentence to results
+                results.append(sentence)
+    return results
+
+
+# Test Code
+subjects = ["I", "You"]
+verbs = ["play"]
+objects = ["Portal", "Sable"]
+print(make_sentences(subjects, verbs, objects))
+
+subjects = ["I", "You"]
+verbs = ["play", "watch"]
+objects = ["Portal", "Sable"]
+print(make_sentences(subjects, verbs, objects))

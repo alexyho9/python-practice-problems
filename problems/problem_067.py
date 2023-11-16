@@ -24,14 +24,26 @@
 
 
 # class Employee
+class Employee:
     # method initializer method with required state
     # parameters first name and last name
+    def __init__(self, first_name, last_name):
         # set self.first_name = first_name
+        self.first_name = first_name
         # set self.last_name = last_name
+        self.last_name = last_name
 
     # method get_fullname(self)
+    def get_fullname(self):
         # returns self.first_name + " " + self.last_name
+        return self.first_name + " " + self.last_name
 
     # method get_email(self)
+    def get_email(self):
         # returns self.first_name.lower() + "." + self.last_name.lower()
         #         + "@company.com"
+        return self.first_name.lower() + "." + self.last_name.lower() + "@company.com"
+
+alex = Employee("Alexander", "Ho")
+print(alex.get_fullname())
+print(alex.get_email())

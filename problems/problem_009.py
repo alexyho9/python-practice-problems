@@ -13,4 +13,11 @@
 # problem to get a good feel for how to solve it.
 
 def is_palindrome(word):
-    pass
+    # get reversed word
+    backwards = word[::-1]
+    # compare words forward and backwards
+    return word == backwards
+
+
+print(is_palindrome("racecar"))
+print(is_palindrome("race"))

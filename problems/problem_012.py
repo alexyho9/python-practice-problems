@@ -16,4 +16,20 @@
 # problem to get a good feel for how to solve it.
 
 def fizzbuzz(number):
-    pass
+    # evaluate if divisible by 3 and 5
+    if number % 3 == 0 and number % 5 == 0:
+        return "fizzbuzz"
+    # evaluate if divisible by 3
+    elif number % 3 == 0:
+        return "fizz"
+    # evaluate if divisible by 5
+    elif number % 5 == 0:
+        return "buzz"
+    # evaluate if not divisible by either 3 or 5
+    else:
+        return number
+
+print(fizzbuzz(15))
+print(fizzbuzz(-10))
+print(fizzbuzz(19))
+print(fizzbuzz(-24))

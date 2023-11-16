@@ -13,4 +13,20 @@
 #     output: {1: "one", 2: "two", 3: "three"}
 
 def reverse_dictionary(dictionary):
-    pass
+    # create new empty dictionary
+    new_dict = {}
+    # for each key in original dictionary, add value and key
+    for key in dictionary:
+        # get value
+        value = dictionary[key]
+        new_dict[value] = key
+
+    # return new dictionary
+    return new_dict
+
+
+dict_a = {"one": 1, "two": 2, "three": 3}
+dict_b = {"uno": "하나", "dos": "둘", "tres": "셋", "cuatro": "넷"}
+
+print(reverse_dictionary(dict_a))
+print(reverse_dictionary(dict_b))

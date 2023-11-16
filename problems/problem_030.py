@@ -11,5 +11,23 @@
 # Write out some pseudocode before trying to solve the
 # problem to get a good feel for how to solve it.
 
+sample = [-5, 14, 9, 2, 23, -1, 25]
+
 def find_second_largest(values):
-    pass
+    # evaluate length of list
+    if len(values) < 2:
+        return None
+    # create variables
+    largest = values[0]
+    second = values[0]
+    # loop through values
+    for num in values[1:]:
+        if num > largest:
+            second = largest
+            largest = num
+        elif num > second:
+            second = num
+    # return second largest
+    return second, largest
+
+print(find_second_largest(sample))

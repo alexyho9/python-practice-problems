@@ -12,5 +12,32 @@
 #     and less than 70
 #   * An "F" for any other average
 
+scores_a = [78, 90, 99, 98, 95]
+scores_b = [90, 70, 87, 85, 91]
+scores_c = [90, 70, 67, 72, 73]
+scores_f = [51, 43, 80, 71, 30]
+
 def calculate_grade(values):
-    pass
+    total = 0
+    length = len(values)
+    # add scores
+    for i in values:
+        total += i
+    # get average
+    average = total / length
+    # evaluate letter grade
+    if average >= 90:
+        return "A"
+    elif average >= 80:
+        return "B"
+    elif average >= 70:
+        return "C"
+    elif average >= 60:
+        return "D"
+    else:
+        return "F"
+
+print(calculate_grade(scores_a))
+print(calculate_grade(scores_b))
+print(calculate_grade(scores_c))
+print(calculate_grade(scores_f))

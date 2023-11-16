@@ -28,3 +28,19 @@
 #     * input: 10
 #       returns:  "X"
 
+def simple_roman(key):
+    # Create roman numeral conversion key-value
+    conversion = {
+        1: "I", 2: "II", 3: "III", 4: "IV", 5: "V",
+        6: "VI", 7: "VII", 8: "VIII", 9: "IX", 10: "X"
+        }
+    # return value
+    return conversion[key]
+
+
+# Test Code
+print(simple_roman(3))
+print(simple_roman(10))
+print(simple_roman(1))
+print(simple_roman(7))
+print(simple_roman(5))

@@ -22,4 +22,22 @@
 
 
 def count_letters_and_digits(s):
-    pass
+    # Create holding variables for letters and digits
+    letters = 0
+    digits = 0
+    # Loop through string
+    for char in s:
+        # Check if character is digit
+        if char.isdigit():
+            digits += 1
+        # Check if character is alpha
+        elif char.isalpha():
+            letters += 1
+    # return total letters and digits
+    return letters, digits
+
+
+print(count_letters_and_digits(""))
+print(count_letters_and_digits("2011bmw335i"))
+print(count_letters_and_digits("mapletree"))
+print(count_letters_and_digits("5104565878"))

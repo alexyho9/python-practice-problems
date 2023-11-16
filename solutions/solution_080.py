@@ -48,3 +48,12 @@ class Receipt:                                              # solution
     def get_total(self):                                    # solution
         # return self.get_subtotal() * (1 + self.tax_rate)
         return self.get_subtotal() * (1 + self.tax_rate)    # solution
+
+# Test Code
+
+item = Receipt(.1)
+item.add_item(ReceiptItem(4, 2.50))
+item.add_item(ReceiptItem(2, 5.00))
+
+print(item.get_subtotal())     # Prints 20
+print(item.get_total())        # Prints 22

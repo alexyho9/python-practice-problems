@@ -16,4 +16,23 @@
 # problem to get a good feel for how to solve it.
 
 def sum_of_first_n_even_numbers(n):
-    pass
+    # Check if n is less than zero, if so, return None
+    if n < 0:
+        return None
+
+    # Create holder value to store total while looping through values in range
+    else:
+        total = 0
+        for i in range(n + 1):
+            # multiply each value by 2 and add to total
+            total += i * 2
+    # return final total
+    return total
+
+
+print(sum_of_first_n_even_numbers(-1))  # None
+print(sum_of_first_n_even_numbers(0))   # 0
+print(sum_of_first_n_even_numbers(1))   # 2
+print(sum_of_first_n_even_numbers(2))   # 6
+print(sum_of_first_n_even_numbers(5))   # 30
+print(sum_of_first_n_even_numbers(10))

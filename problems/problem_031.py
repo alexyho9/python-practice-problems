@@ -14,4 +14,22 @@
 # problem to get a good feel for how to solve it.
 
 def sum_of_squares(values):
-    pass
+    # initiate total to zero
+    total = 0
+    # return None if empty list
+    if len(values) == 0:
+        return None
+    # loop through values
+    for v in values:
+        # square each value and add to total
+        total += v ** 2
+    # return final total
+    return total
+
+
+list1 = [-5, -2, 0, 3, 9]
+list2 = [1, 2]
+list3 = []
+print(sum_of_squares(list1))
+print(sum_of_squares(list2))
+print(sum_of_squares(list3))

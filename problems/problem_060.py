@@ -13,3 +13,17 @@
 #     * input:   [1, 3, 5, 7]
 #       returns: [1, 3, 5, 7]
 
+def only_odds(lst):
+    # loop through original lst and take odds
+    return [x for x in lst if x % 2 != 0]
+
+
+# Test Code
+sample_set = [1, 2, 3, 4]
+print(only_odds(sample_set))
+
+sample_set = [2, 4, 6, 8]
+print(only_odds(sample_set))
+
+sample_set = [1, 3, 5, 7]
+print(only_odds(sample_set))

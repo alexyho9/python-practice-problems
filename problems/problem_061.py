@@ -14,3 +14,20 @@
 #     * input:   [1, 3, 3, 20, 3, 2, 2]
 #       returns: [1, 3, 20, 2]
 
+def remove_duplicates(data_list):
+    results = []
+    for num in data_list:
+        if num not in results:
+            results.append(num)
+    return results
+
+
+# Test Code
+sample_list = [1, 1, 1, 1]
+print(remove_duplicates(sample_list))
+
+sample_list = [1, 2, 2, 1]
+print(remove_duplicates(sample_list))
+
+sample_list = [1, 3, 3, 20, 3, 2, 2]
+print(remove_duplicates(sample_list))

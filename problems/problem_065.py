@@ -17,3 +17,26 @@
 #
 # You may want to look at the built-in "abs" function
 
+def biggest_gap(num_list):
+    if len(num_list) < 2:
+        raise ValueError
+    # create largest number flag
+    largest = 0
+    # loop through list and calculate absolute value of gap
+    for i in range(1, len(num_list)):
+        gap = abs(num_list[i] - num_list[i - 1])
+        # update largest if gap is larger
+        if gap > largest:
+            largest = gap
+    return largest
+
+
+# Test Code
+num_list = [1, 3, 5, 7]
+print(biggest_gap(num_list))
+
+num_list = [1, 11, 9, 20, 0]
+print(biggest_gap(num_list))
+
+num_list = [1, 3, 100, 103, 106]
+print(biggest_gap(num_list))

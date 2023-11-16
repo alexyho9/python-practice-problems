@@ -15,3 +15,15 @@
 #    * input:   "raise"
 #      RAISES:  ValueError
 
+def check_input(parameter):
+    # check if parameter is 'raise' and raise error
+    if parameter == "raise":
+        raise ValueError
+    return parameter
+
+
+# Test Code
+print(check_input(25))
+print(check_input("inverness"))
+print(check_input("raise"))
+print(check_input(47))
