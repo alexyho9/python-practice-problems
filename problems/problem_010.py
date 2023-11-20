@@ -11,4 +11,13 @@
 # problem to get a good feel for how to solve it.
 
 def is_divisible_by_3(number):
-    pass
+    if number % 3 == 0:
+        return "fizz"
+    else:
+        return number
+
+
+print(is_divisible_by_3(3))
+print(is_divisible_by_3(4))
+print(is_divisible_by_3(-5))
+print(is_divisible_by_3(9))
