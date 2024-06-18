@@ -8,4 +8,14 @@
 # problem to get a good feel for how to solve it.
 
 def is_divisible_by_5(number):
-    pass
+    if number % 5 == 0:
+        return "buzz"
+    else:
+        return number
+
+
+print(is_divisible_by_5(3))
+print(is_divisible_by_5(4))
+print(is_divisible_by_5(5))
+print(is_divisible_by_5(7))
+print(is_divisible_by_5(15))
