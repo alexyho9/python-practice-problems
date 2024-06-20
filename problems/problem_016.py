@@ -3,23 +3,21 @@
 # make sure they're between 0 and 10, inclusive.
 
 def is_inside_bounds(x, y):
-    for num in x:
-        if num > 10 or num < 0:
-            return False
-    for num in y:
-        if num > 10 or num < 0:
-            return False
+    if x > 10 or x < 0:
+        return False
+    if y > 10 or y < 0:
+        return False
     return True
 
 
-x1 = (4, 7)
-y1 = (10, 2)
+x1 = 4
+y1 = 10
 
-x2 = (9, 3)
-y2 = (12, 1)
+x2 = 9
+y2 = 12
 
-x3 = (9, 3)
-y3 = (-6, 1)
+x3 = 9
+y3 = -6
 
 print(is_inside_bounds(x1, y1))
 print(is_inside_bounds(x2, y2))
