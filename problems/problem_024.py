@@ -8,4 +8,17 @@
 # Pseudocode is available for you
 
 def calculate_average(values):
-    pass
+    if len(values) < 1:
+        return None
+    aggregate = 0
+    for num in values:
+        aggregate += num
+    return aggregate / len(values)
+
+
+values1 = [5, -1, 10, 7, 2]
+values2 = [9, 13, 27, 4]
+
+
+print(calculate_average(values1))
+print(calculate_average(values2))
