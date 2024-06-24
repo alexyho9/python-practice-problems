@@ -5,4 +5,16 @@
 #
 
 def max_in_list(values):
-    pass
+    if len(values) == 0:
+        return None
+    highest = values[0]
+    for num in values:
+        if num > highest:
+            highest = num
+    return highest
+
+
+print(max_in_list([-4, -10, 13, 7]))
+print(max_in_list([]))
+print(max_in_list([72, -10, 13, 7]))
+print(max_in_list([-54, -10, -32, -27]))
