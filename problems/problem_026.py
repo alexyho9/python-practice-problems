@@ -13,4 +13,28 @@
 #   * An "F" for any other average
 
 def calculate_grade(values):
-    pass
+    total = 0
+    if len(values) == 0:
+        return None
+    for num in values:
+        total += num
+    average = total / len(values)
+    # print(average)
+    if average >= 90:
+        return "A"
+    elif average >= 80:
+        return "B"
+    elif average >= 70:
+        return "C"
+    elif average >= 60:
+        return "D"
+    else:
+        return "F"
+
+
+print(calculate_grade([92, 75, 88, 71]))
+print(calculate_grade([92, 100, 97, 89]))
+print(calculate_grade([83, 75, 64, 71]))
+print(calculate_grade([52, 75, 83, 61]))
+print(calculate_grade([52, 55, 47, 61]))
+print(calculate_grade([]))
