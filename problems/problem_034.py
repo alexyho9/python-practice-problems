@@ -22,4 +22,18 @@
 
 
 def count_letters_and_digits(s):
-    pass
+    letters = 0
+    digits = 0
+    for char in s:
+        if char.isalpha():
+            letters = letters + 1
+        elif char.isdigit():
+            digits = digits + 1
+    return letters, digits
+
+
+print(count_letters_and_digits(""))
+print(count_letters_and_digits("a"))
+print(count_letters_and_digits("1"))
+print(count_letters_and_digits("1a"))
+print(count_letters_and_digits("password123"))
