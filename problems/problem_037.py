@@ -24,4 +24,21 @@
 #     result: "   19"
 
 def pad_left(number, length, pad):
-    pass
+    result = ""
+    num_string = str(number)
+
+    for char in num_string[::-1]:
+        result = char + result
+        length -= 1
+
+    while length > 0:
+        result = pad + result
+        length -= 1
+
+    return result
+
+
+print(pad_left(10, 4, "*"))     # "**10"
+print(pad_left(10, 5, "0"))     # "00010"
+print(pad_left(1000, 3, "0"))   # "1000"
+print(pad_left(19, 5, " "))     # "   19"
