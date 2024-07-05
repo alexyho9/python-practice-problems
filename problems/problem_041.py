@@ -25,15 +25,15 @@ def add_csv_lines(csv_lines):
     result = []
     # iterate over list
     for line in csv_lines:
-    # separate by comma
+        # separate by comma
         line = line.split(",")
-    # create sum variable to hold local sum
+        # create sum variable to hold local sum
         local_sum = 0
-    # iterate over items
+        # iterate over items
         for item in line:
-    # convert to number and add to local sum
+            # convert to number and add to local sum
             local_sum += int(item)
-    # append local sum to result list
+        # append local sum to result list
         result.append(local_sum)
     return result
 
