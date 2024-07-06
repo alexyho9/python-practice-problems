@@ -13,4 +13,28 @@
 # like ".isalpha", ".isdigit", ".isupper", and ".islower"
 
 def check_password(password):
-    pass
+    lower = False
+    upper = False
+    digit = False
+    special = False
+    length = False
+    if len(password) >= 6 and len(password) <= 12:
+        length = True
+    else:
+        return False
+    for char in password:
+        if char.isalpha():
+            if char.isupper():
+                upper = True
+            elif char.islower():
+                lower = True
+        elif char.isdigit():
+            digit = True
+    if password.count("$") > 0 or password.count("!") > 0 or password.count("@") > 0:
+        special = True
+    return lower and upper and digit and special and length
+
+
+print(check_password("apple"))
+print(check_password("pokemon123"))
+print(check_password("$100Dollars"))
