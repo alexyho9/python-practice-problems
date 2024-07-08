@@ -12,3 +12,14 @@
 #    * input: [1, 2, 3]
 #      result: [1, 2], [3]
 
+import math
+
+
+def halve_the_list(values):
+    half_point = math.ceil(len(values)/2)
+    return values[0:half_point], values[half_point:]
+
+
+print(halve_the_list([1, 2, 3, 4]))
+print(halve_the_list([1, 2, 3]))
+print(halve_the_list([5, 6, 7, 8, 9]))
