@@ -17,7 +17,7 @@
 #    * sentence: "Hello Hello Hello"
 #      result:   {"Hello": 3}
 
-## FUNCTION PSEUDOCODE
+# FUNCTION PSEUDOCODE
 # function count_word_frequencies(sentence):
 def count_word_frequencies(sentence):
     # words = split the sentence
