@@ -7,3 +7,15 @@
 #
 # Don't for get to import math!
 
+import math
+
+
+def safe_divide(numerator, denominator):
+    if denominator == 0:
+        return math.inf
+    return numerator / denominator
+
+
+print(safe_divide(9, 3))    # 3
+print(safe_divide(9, 2))    # 4.5
+print(safe_divide(9, 0))    # inf
