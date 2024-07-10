@@ -15,3 +15,18 @@
 #
 # https://docs.python.org/3/library/random.html
 
+import random
+
+
+def generate_lottery_numbers():
+    result = []
+    pot = list(range(1, 41))
+    random.shuffle(pot)
+    for i in range(6):
+        result.append(pot[i])
+    return result
+
+
+print(generate_lottery_numbers())
+print(generate_lottery_numbers())
+print(generate_lottery_numbers())

@@ -16,6 +16,6 @@ def safe_divide(numerator, denominator):
     return numerator / denominator
 
 
-print(safe_divide(9, 3))    # 3
+print(safe_divide(9, 3))    # 3.0
 print(safe_divide(9, 2))    # 4.5
 print(safe_divide(9, 0))    # inf
